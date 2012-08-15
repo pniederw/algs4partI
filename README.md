@@ -16,7 +16,8 @@ running `java -version` from the command line succeeds.
 Getting started
 ---------------
 
-Clone this project from GitHub or download and extract its zipball. The first time
+Clone this project from GitHub or download and extract its
+[zipball](https://github.com/pniederw/algs4partI/zipball/master). The first time
 you invoke the top-level `gradlew` (*nix) or `gradlew.bat` (Windows) script, the
 Gradle build tool will be downloaded automatically. To get rid of Gradle and
 everything it downloaded, delete `<user_home>/.gradle`.
