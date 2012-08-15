@@ -1,0 +1,11 @@
+zip {
+    include "Percolation.java", "PercolationStats.java"
+}
+
+runPercolationStats {
+    args 200, 100
+}
+
+runPercolationVisualizer {
+    args "data/input20.txt"
+}

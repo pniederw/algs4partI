@@ -1,0 +1,17 @@
+# Don't share solutions to course assignments
+src/
+
+# Gradle
+build/
+
+# Eclipse
+bin/
+.settings/
+.project
+.classpath
+
+# IDEA
+out/
+*.iws
+*.ipr
+*.iml

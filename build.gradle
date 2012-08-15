@@ -1,0 +1,70 @@
+allprojects {
+    apply plugin: "idea"
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "checkstyle"
+    apply plugin: "findbugs"
+    apply plugin: "eclipse"
+
+    sourceCompatibility = 1.6
+
+    repositories {
+        mavenCentral()
+    }
+
+    def libDir = "$rootProject.projectDir/lib"
+
+    dependencies {
+        compile files("$libDir/classes", "$libDir/algs4.jar", "$libDir/stdlib.jar")
+        testCompile "junit:junit:4.10"
+    }
+
+    sourceSets {
+        main.java.srcDirs = ["src"]
+        test.java.srcDirs = ["test"]
+    }
+
+    def configDir = "$rootProject.projectDir/config"
+
+    checkstyle {
+        toolVersion = "5.5"
+        configFile = file("$configDir/checkstyle.xml")
+    }
+
+    findbugs {
+        toolVersion = "2.0.1"
+        // Gradle 1.1 does not have support for declaring FindBugs filters
+        // configFile = file("$configDir/findbugs.xml")
+    }
+
+    // some of the provided test classes fail these checks
+    checkstyleTest.enabled = false
+    findbugsTest.enabled = false
+
+    task zip(type: Zip) {
+        from sourceSets.main.java
+    }
+
+    tasks.addRule("Pattern: run<ClassName>") { taskName ->
+        if (taskName.startsWith("run")) {
+            task(taskName, type: JavaExec) {
+                main = taskName.substring(3)
+                if (System.getProperty("args")) {
+                    gradle.projectsEvaluated {
+                        args = System.getProperty("args").split(",") as List
+                    }
+                }
+                classpath = sourceSets.test.runtimeClasspath
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
