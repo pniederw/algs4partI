@@ -1,8 +1,12 @@
 # Don't share solutions to course assignments
 src/
 
+# Mac
+.DS_Store
+
 # Gradle
 build/
+.gradle/
 
 # Eclipse
 bin/
