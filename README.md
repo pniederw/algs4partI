@@ -10,7 +10,8 @@ To prevent accidental sharing, `.gitignore` excludes all `src` directories.
 Prerequisites
 -------------
 
-All you need to get started is a JDK installation (1.5 or higher).
+All you need to get started is a JDK installation (1.5 or higher). Make sure that
+running `java -version` from the command line succeeds.
 
 Getting started
 ---------------
