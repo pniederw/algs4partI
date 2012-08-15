@@ -126,7 +126,9 @@ by adding `findbugsMain.enabled = false` to `weekN/build.gradle`.
 Disclaimer
 ----------
 
-Use at your own risk.
+Use at your own risk. Files in the `lib` and `data` directories are copyrighted by the
+course instructors and are only for personal use by students enrolled in the [Coursera
+course](https://www.coursera.org/course/algs4partI).
 
 
 
