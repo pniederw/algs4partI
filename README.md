@@ -25,7 +25,7 @@ Gradle basics
 
 To build all code, run `gradlew build` from the top-level directory.
 To build the code for a particular week of the course, cd into the corresponding
-directory and run `gradlew build` from there. The same holds for all Gradle commands explained below.
+directory and run `../gradlew build` from there. The same holds for all Gradle commands explained below.
 
 Where to place source code
 --------------------------
