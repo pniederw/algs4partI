@@ -29,11 +29,18 @@ Where to place source code
 Solutions to assignments should go into weekN/src directories.
 Manual tests and JUnit tests should go into weekN/test directories.
 
+External dependencies
+---------------------
+
+Jar files under `lib` and classes under `lib/classes` are visible to all code.
+JUnit 4.10 is visible to all test code.
+
 How to run `main` classes
 -------------------------
 
 `gradlew run<ClassName>`
-Example: `gradlew runPercolationStats` will run the `main` method of the `src/PercolationStats.java` class (assuming it exists).
+Example: `gradlew runPercolationStats` will run the `main` method of the
+`src/PercolationStats.java` class (assuming it exists).
 
 `gradlew run<ClassName> -Dargs=arg1,arg2`
 Example: `gradlew runPercolationStats -Dargs=200,100`
