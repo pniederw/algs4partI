@@ -7,27 +7,31 @@ A [Gradle](http://gradle.org) build template for Coursera's [Algorithms, Part I]
 
 To prevent accidental sharing, `.gitignore` excludes all `src` directories.
 
+Prerequisites
+-------------
+
+All you need to get started is a JDK installation (1.5 or higher).
+
 Getting started
 ---------------
 
-Clone this project from GitHub or download the zipball.
+Clone this project from GitHub or download and extract its zipball. The first time
+you invoke the top-level `gradlew` (*nix) or `gradlew.bat` (Windows) script, the
+Gradle build tool will be downloaded automatically. To get rid of Gradle and
+everything it downloaded, delete `<user_home>/.gradle`.
 
 Gradle basics
 -------------
 
-Gradle is invoked via the `gradlew` (*nix) or `gradlew.bat` (Windows) script located
-in the top-level directory. To build all code, run `gradlew build` from the top-level directory.
-To build the code for a particular week, cd into the corresponding directory and run
-`gradlew build` from there. The same holds for all other Gradle commands explained below.
-
-All required dependencies, including Gradle itself, will be downloaded automatically.
-They will be cached in `<user_home>/.gradle`.
+To build all code, run `gradlew build` from the top-level directory.
+To build the code for a particular week of the course, cd into the corresponding
+directory and run `gradlew build` from there. The same holds for all Gradle commands explained below.
 
 Where to place source code
 --------------------------
 
-Solutions to assignments should go into weekN/src directories.
-Manual tests and JUnit tests should go into weekN/test directories.
+Solutions to assignments should go into `weekN/src` directories.
+Manual test and JUnit tests should go into `weekN/test` directories.
 
 External dependencies
 ---------------------
