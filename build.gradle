@@ -43,6 +43,10 @@ subprojects {
     checkstyleTest.enabled = false
     findbugsTest.enabled = false
 
+    test {
+        testLogging.showExceptions = true
+    }
+
     task zip(type: Zip) {
         from sourceSets.main.java
     }
