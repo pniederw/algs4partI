@@ -3,7 +3,7 @@ algs4partI
 
 A [Gradle](http://gradle.org) build template for Coursera's [Algorithms, Part I](https://www.coursera.org/course/algs4partI) course.
 
-**Don't use this project to share solutions to assignments!**
+**Don't abuse this project for sharing solutions to assignments!**
 
 To prevent accidental sharing, `.gitignore` excludes all `src` directories.
 
