@@ -17,7 +17,7 @@ subprojects {
     def libDir = "$rootProject.projectDir/lib"
 
     dependencies {
-        compile files("$libDir/classes", "$libDir/algs4.jar", "$libDir/stdlib.jar")
+        compile files("$libDir/classes", "$libDir/algs4.jar")
         testCompile "junit:junit:4.10"
     }
 
@@ -36,7 +36,7 @@ subprojects {
     findbugs {
         toolVersion = "2.0.1"
         // Gradle 1.1 does not have support for declaring FindBugs filters
-        // configFile = file("$configDir/findbugs.xml")
+        includeFilter = file("$configDir/findbugs.xml")
     }
 
     // some of the provided test classes fail these checks
