@@ -29,12 +29,12 @@ subprojects {
     def configDir = "$rootProject.projectDir/config"
 
     checkstyle {
-        toolVersion = "5.5"
+        toolVersion = "6.5"
         configFile = file("$configDir/checkstyle.xml")
     }
 
     findbugs {
-        toolVersion = "2.0.1"
+        toolVersion = "3.0.1"
         // Gradle 1.1 does not have support for declaring FindBugs filters
         includeFilter = file("$configDir/findbugs.xml")
     }
